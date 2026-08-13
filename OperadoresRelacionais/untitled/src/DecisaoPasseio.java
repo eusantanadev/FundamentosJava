@@ -15,5 +15,8 @@ public class DecisaoPasseio {
         if (ensolarado && finalSemana) { // "&&" Representa o operador AND em Java
             System.out.println("Vamos  á praia para aproveitar o sol!");
         }
+        else {
+            System.out.println("Vamos ao parque local.");
+        }
     }
 }
