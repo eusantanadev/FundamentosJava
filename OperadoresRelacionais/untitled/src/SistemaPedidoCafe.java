@@ -8,7 +8,7 @@ public class SistemaPedidoCafe {
         double valorTotal = 0;
         int quantidadeCafes = 0;
         boolean continuarPedido = true;
-        while (continuarPedido) {
+        do {
         System.out.println("Escolha o tamanho do seu café: (P) Pequeno, (M) Médio, (G) Grande: ");
         String tamanho = scanner.nextLine().toUpperCase();
         if (tamanho.equals("F")) {
@@ -52,7 +52,7 @@ public class SistemaPedidoCafe {
                 quantidadeCafes++;
                 System.out.println("Café adicionado ao pedido!");
             }
-        }
+        } while (continuarPedido);
         System.out.println("Seu pedido foi finalizado. Total a pagar: R$" + valorTotal);
         System.out.println("Quantidade de cafés pedidos: " + quantidadeCafes);
         scanner.close();
