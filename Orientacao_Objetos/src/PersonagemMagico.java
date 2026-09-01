@@ -4,6 +4,8 @@ public class PersonagemMagico {
         String poderMagico;
         int nivelEnergia;
         //Construtor exige a inclusão de um nome
+        public PersonagemMagico() {
+        }
         public PersonagemMagico(String nome) {
                 this.nome = nome;
         }
