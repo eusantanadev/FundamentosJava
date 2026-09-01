@@ -9,4 +9,5 @@ public class PersonagemMagico {
         public PersonagemMagico(String nome) {
                 this.nome = nome;
         }
+
 }
