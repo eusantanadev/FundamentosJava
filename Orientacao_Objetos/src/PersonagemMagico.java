@@ -3,6 +3,7 @@ public class PersonagemMagico {
         String nome;
         String poderMagico;
         int nivelEnergia;
+        HabilidadeEspecial habilidade;
         //Construtor exige a inclusão de um nome
         public PersonagemMagico() {
         }
