@@ -26,6 +26,18 @@ public class PersonagemMagico {
                 nivelEnergia = nivelEnergia + energia;
                 return nivelEnergia;
         }
+
+        public void ativarHabilidadeEspecial(){
+                if(!habilidade.ativa){
+                   System.out.println("Habilidade especial não esta ativada.");
+                } else if (nivelEnergia >= habilidade.custoEnergia){
+                        System.out.println("Ativando habilidade: " + habilidade.nomeHabilidade);
+                        nivelEnergia -= habilidade.custoEnergia;
+                } else {
+                        System.out.println(nome + "está sem energia para a habilidade especial");
+                }
+        }
 }
+
 
 

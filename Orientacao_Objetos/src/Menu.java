@@ -8,7 +8,7 @@ public class Menu {
         PersonagemMagico personagem = new PersonagemMagico();
         int op;
         do {
-            System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n0-Sair");
+            System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n5-Ativar Habilidade Especial \n0-Sair");
             op = sc.nextInt();
             switch (op) {
                 case 1:
@@ -48,6 +48,9 @@ public class Menu {
                     int qtd = sc.nextInt();
                     int nivelAtual = personagem.aumentarEnergia(qtd);
                     System.out.println("Nivel atual de energia: " + nivelAtual);
+                    break;
+                case 5:
+                    personagem.ativarHabilidadeEspecial();
                     break;
                     case 0:
                     System.out.println("Finalizando o programa");
