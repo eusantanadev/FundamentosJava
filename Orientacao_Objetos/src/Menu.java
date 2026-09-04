@@ -8,7 +8,7 @@ public class Menu {
         PersonagemMagico personagem = new PersonagemMagico();
         int op;
         do {
-            System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n0-Sair");
+            System.out.println("Escolha uma opção: \n1-Cadastrar Personagem \n2-Exibir Personagem \n3-Realizar ataque \n4-Aumentar energia \n0-Sair");
             op = sc.nextInt();
             switch (op) {
                 case 1:
@@ -30,15 +30,26 @@ public class Menu {
                     System.out.println("A habilidade esta ativada? true - sim / false - não");
                     boolean ativa = sc.nextBoolean();
                     //Criando o objeto  que representa a habilidade especial com valores informados pelo usuario
-                    HabilidadeEspecial HabilidadeEspecial = new HabilidadeEspecial(nomeHabilidade, custoEnergia, ativa);
+                    HabilidadeEspecial habilidadeEspecial = new HabilidadeEspecial(nomeHabilidade, custoEnergia, ativa);
                     //Atribuindo o objeto habilidade especial ao personagem
-                    personagem.habilidade = HabilidadeEspecial;
+                    personagem.habilidade = habilidadeEspecial;
                     break;
                 case 2:
                     System.out.println("Nome: " + personagem.nome + " Poder: " + personagem.poderMagico + " Energia: " + personagem.nivelEnergia);
                     System.out.println("Habilidade: " + personagem.habilidade.nomeHabilidade + " Custo Energia: " + personagem.habilidade.custoEnergia + " Habilidade Ativa? " + personagem.habilidade.ativa);
                     break;
-                case 0:
+                case 3:
+                    System.out.println("Digite o nome do ataque: ");
+                    String ataque = sc.next() + sc.nextLine();
+                    personagem.atacar(ataque);
+                    break;
+                case 4:
+                    System.out.println("Digite a quantidade energia: ");
+                    int qtd = sc.nextInt();
+                    int nivelAtual = personagem.aumentarEnergia(qtd);
+                    System.out.println("Nivel atual de energia: " + nivelAtual);
+                    break;
+                    case 0:
                     System.out.println("Finalizando o programa");
                 default:
                     System.out.println("Opção inválida");
